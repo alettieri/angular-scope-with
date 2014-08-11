@@ -6,7 +6,7 @@ Adds ability to scope an object with a certain property in a template.
 When using objects with nested properties, it can become tedious to display child properties in an angular template. 
 
 #### For Example
-
+```
   PersonController($scope) {
     $scope.person = {
       name: 'Alice Jane',
@@ -22,9 +22,9 @@ When using objects with nested properties, it can become tedious to display chil
     };
    
   }
-
+```
 #### Template
-
+```
   <div ng-controller="PersonController">
     <div class="person">
         Name: {{person.name}} <br />
@@ -36,7 +36,7 @@ When using objects with nested properties, it can become tedious to display chil
         {{person.address.state}}
     </div>
   </div>
-  
+```
 Typing out all the properties can become tedious and spoil your template code. 
 
 ### Scope With
@@ -46,7 +46,7 @@ The scope with directive is designed to scope the properties and transcludes the
 ### Template using scope-with
 
 Re-using the same object we can modify our code to read as follows.
-
+```
 <div ng-controller="PersonController">
    <div class="person" scope-with="person">
       Name: {{name}} <br />
@@ -58,9 +58,9 @@ Re-using the same object we can modify our code to read as follows.
       {{address.state}}
    </div>
 </div>
-
+```
 Or:
-
+```
 <div ng-controller="PersonController">
    <div class="person" scope-with="person">
       Name: {{name}} <br />
@@ -74,7 +74,7 @@ Or:
       </address>
    </div>
 </div>
-
+```
 #### Using the directive
 
 In your module, simply register the scope-with module as a dependency, or just copy and paste the directive code.
