@@ -81,3 +81,9 @@ In your module, simply register the scope-with module as a dependency, or just c
 ```
 angular.module('myapp', ['al.directive.scopewith']).controller('PersonController', PersonController);
 ```
+
+### Working Demo
+
+http://embed.plnkr.co/OJDhpJ1maEdSoPvlbiRA/
+
+
