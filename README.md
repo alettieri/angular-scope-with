@@ -78,5 +78,6 @@ Or:
 #### Using the directive
 
 In your module, simply register the scope-with module as a dependency, or just copy and paste the directive code.
-
+```
 angular.module('myapp', ['al.directive.scopewith']).controller('PersonController', PersonController);
+```
